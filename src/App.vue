@@ -1,28 +1,31 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    base_app
+    <p>echart version: {{ data_version }}</p>
+    <childAppButton/>
+    <childAppChart/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import * as echarts from 'echarts';
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    childAppButton: () => import('childApp/custom-button'),
+    childAppChart: () => import('childApp/custom-chart'),
+  },
+  data() {
+    return {
+      data_version: ''
+    };
+  },
+  mounted() {
+    this.data_version = echarts.version
   }
-}
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped lang="less">
+
 </style>
