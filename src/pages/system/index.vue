@@ -1,12 +1,14 @@
 <template>
-  <div class="page-root">
-    <router-view/>
+  <div>
+    here is system setting
   </div>
 </template>
 
 <script>
-
 export default {
+  components: {
+
+  },
   data() {
     return {
 
@@ -16,8 +18,5 @@ export default {
 </script>
 
 <style scoped lang="less">
-.page-root {
-  width: 100%;
-  height: 100%;
-}
+
 </style>

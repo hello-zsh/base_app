@@ -1,23 +1,24 @@
 <template>
-  <div class="page-root">
-    <router-view/>
+  <div id="micro-container">
   </div>
 </template>
 
 <script>
 
 export default {
+  components: {
+
+  },
   data() {
     return {
 
     };
   },
+  mounted() {
+  },
 };
 </script>
 
 <style scoped lang="less">
-.page-root {
-  width: 100%;
-  height: 100%;
-}
+
 </style>
