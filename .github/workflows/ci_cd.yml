@@ -18,8 +18,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: build project
         run: |
-          ls,
-          npm i,
+          ls
+          npm i
           npm run build
       
       - name: ssh deploy
